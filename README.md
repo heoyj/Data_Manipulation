@@ -68,7 +68,6 @@ Joint plot Figure 1 gives the correlation coefficient, $R^2=0.61$, but it is har
 __Table 1__
 
 | Inspection Grade        | 1 | 1.5  | 2 | 2.5  | 3 | 3.5 | 4 | 4.5 | 5 | Total |
-| Inspection Grade        | 1 | 1.5  | 2 | 2.5  | 3 | 3.5 | 4 | 4.5 | 5 | Total |
 | :----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | A     | 3 | 11 | 26 | 60 | 161 | 297 | 409 | 236 | 30 | 1233 |
 | B     | 0 | 0  | 0  | 7  | 10  | 12  | 18  | 15  |  0 | 62   |
