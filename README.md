@@ -1,6 +1,6 @@
-# On-time Performance Analysis Project 
+# Exploratory Analysis Project 
 
-## Yelp rating in Las Vegas in terms of cleariness
+## Yelp rating in Las Vegas with Food Inspection Result
 
 ## 1. Introduction 
 
