@@ -59,11 +59,11 @@ While combining the two datasets, the unmatched cases were deleted and there was
 In order to address the answer for the goal, a joint plot was drawn using ‘seaborne’ module. ‘jointplot’ function allows drawing scatter plot with marginal histogram for two variables. Since Yelp rating variable from 1 to 5 in real number and Food_Insp grade is categorized as A-C and N, O, X. In here, only A-C were considered because their meaning are addressed the number of violations and also I could not find the information about N, O and X grade on the website. 
 
 ![Figure 1.](https://cloud.githubusercontent.com/assets/16962486/26417189/4e8d68ac-406d-11e7-890d-3fe9842492e2.png)
-__Figure 1.__ Joint plot between Yelp rating and Food Inspection grade; correlation coefficient between two variables ($R^2=0.61$)
+__Figure 1.__ Joint plot between Yelp rating and Food Inspection grade; correlation coefficient between two variables (R^2=0.61)
 
 According to South Nevada Health District, grade ‘A’ means that the restaurant has earned between 0 and 10 demerits on the last inspection, ‘B’ stands for earning between 11 and 20 demerits or identical consecutive critical or major violations. ‘C’ means that the restaurant has earned between 21 and 40 demerits, has identical consecutive critical or major violations or more than 10 demerits on a ‘B’ grade re-inspection. Since they are ordinal data, give 5 to ‘A’, 4 to ‘B’ and 3 to ‘C’.
 
-Joint plot Figure 1 gives the correlation coefficient, $R^2=0.61$, but it is hard to say that there would be a relationship between those two variables. To test the significant relationship, Fisher’s exact test was conducted in R using ‘fisher.test’ function with Yelp rating and inspection grade that were converted into numbers. In terms of categorical analysis, chi-square test can be the first trial, but this test is only valid when there is no zero observations or no less than five observations in each combination of two variables. As shown in contingency table Table 1, majority of cells count zero. For example, the stores with star 1 or 2 did not get any grade B or C and therefore, chi-square test cannot be applied for this dataset. The alternative way for this case is to use Fisher’s exact test. The null hypothesis is about the independence between two ordinal variables, that is, there was no dependency or no relationship between them. Since the p-value is 0.7293 for two-sided test (independency vs. dependency) at significant level α=0.05, the null hypothesis cannot be rejected and therefore it is assumed that they are not related to each other. 
+Joint plot Figure 1 gives the correlation coefficient, R^2=0.61, but it is hard to say that there would be a relationship between those two variables. To test the significant relationship, Fisher’s exact test was conducted in R using ‘fisher.test’ function with Yelp rating and inspection grade that were converted into numbers. In terms of categorical analysis, chi-square test can be the first trial, but this test is only valid when there is no zero observations or no less than five observations in each combination of two variables. As shown in contingency table Table 1, majority of cells count zero. For example, the stores with star 1 or 2 did not get any grade B or C and therefore, chi-square test cannot be applied for this dataset. The alternative way for this case is to use Fisher’s exact test. The null hypothesis is about the independence between two ordinal variables, that is, there was no dependency or no relationship between them. Since the p-value is 0.7293 for two-sided test (independency vs. dependency) at significant level α=0.05, the null hypothesis cannot be rejected and therefore it is assumed that they are not related to each other. 
 
 
 | Inspection Grade \ Yelp Rating       | 1 | 1.5  | 2 | 2.5  | 3 | 3.5 | 4 | 4.5 | 5 | Total |
@@ -87,12 +87,12 @@ In this project, I would like to investigate the relationship between Yelp ratin
 
 ## 6. References
 
-[1] https://www.yelp.com/healthscores/feeds
+[1] <https://www.yelp.com/healthscores/feeds>
 [2] Uppoor, Shashank, and Shreyas Pathre Balakrishna. "Predicting Restaurant Health Inspection Penalty Score from Yelp Reviews."
 [3] Kang, Jun Seok, et al. "Where Not to Eat? Improving Public Policy by Predicting Hygiene Inspections Using Online Reviews." EMNLP. 2013.
 [4] Wong, Samantha, Hamidreza Chinaei, and Frank Rudzicz. "Predicting health inspection results from online restaurant reviews." arXiv preprint arXiv:1603.05673 (2016).
 [5] Sadilek, Adam, et al. "Deploying nEmesis: Preventing Foodborne Illness by Data Mining Social Media." (2016).
-[6] South Nevada Health District: http://www.southernnevadahealthdistrict.org/ferl/grade-card.php
+[6] South Nevada Health District: <http://www.southernnevadahealthdistrict.org/ferl/grade-card.php>
 
 
 
