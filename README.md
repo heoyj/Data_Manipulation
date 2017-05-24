@@ -56,5 +56,18 @@ While combining the two datasets, the unmatched cases were deleted and there was
 
 ## 4. Analysis and Visualization
 
-![alt text](https://cloud.githubusercontent.com/assets/16962486/26417189/4e8d68ac-406d-11e7-890d-3fe9842492e2.png)
+In order to address the answer for the goal, a joint plot was drawn using ‘seaborne’ module. ‘jointplot’ function allows drawing scatter plot with marginal histogram for two variables. Since Yelp rating variable from 1 to 5 in real number and Food_Insp grade is categorized as A-C and N, O, X. In here, only A-C were considered because their meaning are addressed the number of violations and also I could not find the information about N, O and X grade on the website. 
+
+![Figure 1.](https://cloud.githubusercontent.com/assets/16962486/26417189/4e8d68ac-406d-11e7-890d-3fe9842492e2.png)
+__Figure 1.__ Joint plot between Yelp rating and Food Inspection grade; correlation coefficient between two variables ($R^2=0.61$)
+
+According to South Nevada Health District, grade ‘A’ means that the restaurant has earned between 0 and 10 demerits on the last inspection, ‘B’ stands for earning between 11 and 20 demerits or identical consecutive critical or major violations. ‘C’ means that the restaurant has earned between 21 and 40 demerits, has identical consecutive critical or major violations or more than 10 demerits on a ‘B’ grade re-inspection. Since they are ordinal data, give 5 to ‘A’, 4 to ‘B’ and 3 to ‘C’.
+
+Joint plot Figure 1 gives the correlation coefficient, $R^2=0.61$, but it is hard to say that there would be a relationship between those two variables. To test the significant relationship, Fisher’s exact test was conducted in R using ‘fisher.test’ function with Yelp rating and inspection grade that were converted into numbers. In terms of categorical analysis, chi-square test can be the first trial, but this test is only valid when there is no zero observations or no less than five observations in each combination of two variables. As shown in contingency table Table 1, majority of cells count zero. For example, the stores with star 1 or 2 did not get any grade B or C and therefore, chi-square test cannot be applied for this dataset. The alternative way for this case is to use Fisher’s exact test. The null hypothesis is about the independence between two ordinal variables, that is, there was no dependency or no relationship between them. Since the p-value is 0.7293 for two-sided test (independency vs. dependency) at significant level α=0.05, the null hypothesis cannot be rejected and therefore it is assumed that they are not related to each other. 
+
+__Table 1__
+If the variables are related, generating new measurement that incorporated two values can be meaningful. However, ad-hoc analysis will not be conducted since it turned out that there is no relationship. 
+
+In visualization, each food place is plotted on the map as shown in <Figure 2> with pop-up window, which contains store’s name, Yelp rating as stars, grade as food inspection result, date of inspection. However, it’s hard to figure out in a picture whether this store earned which grades. Therefore, color map based on food inspection result was implemented, <Figure 3>. As shown in <Figure 3>, each food place is dotted on the map with pop-up window, which contains the same information as before. Now, green stands for being earned grade ‘A’, blue does  ‘B’, and red does ‘C’, respectively. Using ‘addCircleMarkers’ controller in leaflet function generated color-based map. It is a kind of interactive map, so zoom-in/out is possible and there are various add-on features.
+
 
