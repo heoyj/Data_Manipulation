@@ -65,19 +65,34 @@ According to South Nevada Health District, grade ‘A’ means that the restaura
 
 Joint plot Figure 1 gives the correlation coefficient, $R^2=0.61$, but it is hard to say that there would be a relationship between those two variables. To test the significant relationship, Fisher’s exact test was conducted in R using ‘fisher.test’ function with Yelp rating and inspection grade that were converted into numbers. In terms of categorical analysis, chi-square test can be the first trial, but this test is only valid when there is no zero observations or no less than five observations in each combination of two variables. As shown in contingency table Table 1, majority of cells count zero. For example, the stores with star 1 or 2 did not get any grade B or C and therefore, chi-square test cannot be applied for this dataset. The alternative way for this case is to use Fisher’s exact test. The null hypothesis is about the independence between two ordinal variables, that is, there was no dependency or no relationship between them. Since the p-value is 0.7293 for two-sided test (independency vs. dependency) at significant level α=0.05, the null hypothesis cannot be rejected and therefore it is assumed that they are not related to each other. 
 
-__Table 1__
 
-| Inspection Grade        | 1 | 1.5  | 2 | 2.5  | 3 | 3.5 | 4 | 4.5 | 5 | Total |
+| Inspection Grade \ Yelp Rating       | 1 | 1.5  | 2 | 2.5  | 3 | 3.5 | 4 | 4.5 | 5 | Total |
 | :----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | A     | 3 | 11 | 26 | 60 | 161 | 297 | 409 | 236 | 30 | 1233 |
 | B     | 0 | 0  | 0  | 7  | 10  | 12  | 18  | 15  |  0 | 62   |
 | C     | 0 | 0  | 0  | 1  | 1   | 6   | 9   |  5  |  0 | 22   |
 | Total | 3 | 11 | 26 | 68 | 172 | 315 | 436 | 256 | 30 | 1317 |
 
-
+__Table 1.__ Contingency table between Yelp rating by stars and Food Inspection Grade
 
 If the variables are related, generating new measurement that incorporated two values can be meaningful. However, ad-hoc analysis will not be conducted since it turned out that there is no relationship. 
 
-In visualization, each food place is plotted on the map as shown in <Figure 2> with pop-up window, which contains store’s name, Yelp rating as stars, grade as food inspection result, date of inspection. However, it’s hard to figure out in a picture whether this store earned which grades. Therefore, color map based on food inspection result was implemented, <Figure 3>. As shown in <Figure 3>, each food place is dotted on the map with pop-up window, which contains the same information as before. Now, green stands for being earned grade ‘A’, blue does  ‘B’, and red does ‘C’, respectively. Using ‘addCircleMarkers’ controller in leaflet function generated color-based map. It is a kind of interactive map, so zoom-in/out is possible and there are various add-on features.
+In visualization, each food place is plotted on the map as shown in Figure 2 with pop-up window, which contains store’s name, Yelp rating as stars, grade as food inspection result, date of inspection. However, it’s hard to figure out in a picture whether this store earned which grades. Therefore, color map based on food inspection result was implemented, Figure 3. As shown in Figure 3, each food place is dotted on the map with pop-up window, which contains the same information as before. Now, green stands for being earned grade ‘A’, blue does  ‘B’, and red does ‘C’, respectively. Using ‘addCircleMarkers’ controller in leaflet function generated color-based map. It is a kind of interactive map, so zoom-in/out is possible and there are various add-on features.
+
+
+
+## 5. Discussion
+
+In this project, I would like to investigate the relationship between Yelp rating and food inspection result, specifically grade in Las Vegas.  Since the dataset was obtained from only Las Vegas area and filtering method were implemented using ‘SequenceMatcher’ in store name and address within the same zip code, the result may not be consistent to other researches. If the review and other relevant dataset were incorporated together, then it would produce different result. For only considering Yelp rating and food inspection grade, Fisher’s exact test resulted in independency between two variables. It means that there is no relationship; therefore, making a measurement, which incorporates two values, is not meaningful. I guess that’s why Yelp shows the health score, which also represent a portion of food safety information, separately on their webpage. Therefore, only visualization was conducted for the ad-hoc analysis and the result file was saved as html format and attached in the zip file. 
+
+## 6. References
+
+[1] https://www.yelp.com/healthscores/feeds
+[2] Uppoor, Shashank, and Shreyas Pathre Balakrishna. "Predicting Restaurant Health Inspection Penalty Score from Yelp Reviews."
+[3] Kang, Jun Seok, et al. "Where Not to Eat? Improving Public Policy by Predicting Hygiene Inspections Using Online Reviews." EMNLP. 2013.
+[4] Wong, Samantha, Hamidreza Chinaei, and Frank Rudzicz. "Predicting health inspection results from online restaurant reviews." arXiv preprint arXiv:1603.05673 (2016).
+[5] Sadilek, Adam, et al. "Deploying nEmesis: Preventing Foodborne Illness by Data Mining Social Media." (2016).
+[6] South Nevada Health District: http://www.southernnevadahealthdistrict.org/ferl/grade-card.php
+
 
 
