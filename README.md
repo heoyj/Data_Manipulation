@@ -1,4 +1,4 @@
-# Exploratory Analysis Project 
+# Project using Data Manipulation 
 
 ## Yelp rating in Las Vegas with Food Inspection Result
 
