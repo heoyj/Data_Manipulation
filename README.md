@@ -67,9 +67,11 @@ Joint plot Figure 1 gives the correlation coefficient, $R^2=0.61$, but it is har
 
 __Table 1__
 
-| Header ||
-|--------------|
-| 0 | 1 |
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 
 If the variables are related, generating new measurement that incorporated two values can be meaningful. However, ad-hoc analysis will not be conducted since it turned out that there is no relationship. 
