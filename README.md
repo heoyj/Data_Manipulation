@@ -79,7 +79,9 @@ If the variables are related, generating new measurement that incorporated two v
 
 In visualization, each food place is plotted on the map as shown in Figure 2 with pop-up window, which contains store’s name, Yelp rating as stars, grade as food inspection result, date of inspection. However, it’s hard to figure out in a picture whether this store earned which grades. Therefore, color map based on food inspection result was implemented, Figure 3. As shown in Figure 3, each food place is dotted on the map with pop-up window, which contains the same information as before. Now, green stands for being earned grade ‘A’, blue does  ‘B’, and red does ‘C’, respectively. Using ‘addCircleMarkers’ controller in leaflet function generated color-based map. It is a kind of interactive map, so zoom-in/out is possible and there are various add-on features.
 
+__Figure 2.__ will be updated soon!
 
+__Figure 3.__ will be updated soon!
 
 ## 5. Discussion
 
@@ -87,12 +89,12 @@ In this project, I would like to investigate the relationship between Yelp ratin
 
 ## 6. References
 
-[1] <https://www.yelp.com/healthscores/feeds>
-[2] Uppoor, Shashank, and Shreyas Pathre Balakrishna. "Predicting Restaurant Health Inspection Penalty Score from Yelp Reviews."
-[3] Kang, Jun Seok, et al. "Where Not to Eat? Improving Public Policy by Predicting Hygiene Inspections Using Online Reviews." EMNLP. 2013.
-[4] Wong, Samantha, Hamidreza Chinaei, and Frank Rudzicz. "Predicting health inspection results from online restaurant reviews." arXiv preprint arXiv:1603.05673 (2016).
-[5] Sadilek, Adam, et al. "Deploying nEmesis: Preventing Foodborne Illness by Data Mining Social Media." (2016).
-[6] South Nevada Health District: <http://www.southernnevadahealthdistrict.org/ferl/grade-card.php>
+1. <https://www.yelp.com/healthscores/feeds>
+2. Uppoor, Shashank, and Shreyas Pathre Balakrishna. "Predicting Restaurant Health Inspection Penalty Score from Yelp Reviews."
+3. Kang, Jun Seok, et al. "Where Not to Eat? Improving Public Policy by Predicting Hygiene Inspections Using Online Reviews." EMNLP. 2013.
+4. Wong, Samantha, Hamidreza Chinaei, and Frank Rudzicz. "Predicting health inspection results from online restaurant reviews." arXiv preprint arXiv:1603.05673 (2016).
+5. Sadilek, Adam, et al. "Deploying nEmesis: Preventing Foodborne Illness by Data Mining Social Media." (2016).
+6. South Nevada Health District: <http://www.southernnevadahealthdistrict.org/ferl/grade-card.php>
 
 
 
