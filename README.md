@@ -54,5 +54,7 @@ If we got the pairs of indices in a list of tuples, which consists of one from Y
 While combining the two datasets, the unmatched cases were deleted and there was no incomplete observation for the final dataset. Thus, it was okay to go with it in analysis.  The main process was focused in building up the primary key based on the same zip code, store name and their address. While building up the mapping table, ‘SequenceMatcher’ in ‘similar’, ‘matchingStore’ and ‘matchingIdx’ played an important role and regular expression & SQLite were applied as well.
 
 
+## 4. Analysis and Visualization
 
+![alt text](https://cloud.githubusercontent.com/assets/16962486/26417189/4e8d68ac-406d-11e7-890d-3fe9842492e2.png)
 
