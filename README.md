@@ -66,6 +66,7 @@ According to South Nevada Health District, grade ‘A’ means that the restaura
 Joint plot Figure 1 gives the correlation coefficient, $R^2=0.61$, but it is hard to say that there would be a relationship between those two variables. To test the significant relationship, Fisher’s exact test was conducted in R using ‘fisher.test’ function with Yelp rating and inspection grade that were converted into numbers. In terms of categorical analysis, chi-square test can be the first trial, but this test is only valid when there is no zero observations or no less than five observations in each combination of two variables. As shown in contingency table Table 1, majority of cells count zero. For example, the stores with star 1 or 2 did not get any grade B or C and therefore, chi-square test cannot be applied for this dataset. The alternative way for this case is to use Fisher’s exact test. The null hypothesis is about the independence between two ordinal variables, that is, there was no dependency or no relationship between them. Since the p-value is 0.7293 for two-sided test (independency vs. dependency) at significant level α=0.05, the null hypothesis cannot be rejected and therefore it is assumed that they are not related to each other. 
 
 __Table 1__
+
 | Header ||
 |--------------|
 | 0 | 1 |
